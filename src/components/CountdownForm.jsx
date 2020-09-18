@@ -29,7 +29,7 @@ class CountdownForm extends React.Component {
           />
           <input
             type="submit"
-            className="button success expanded timer-button"
+            className="button"
             value="Start Countdown"
           />
         </form>
