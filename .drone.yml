@@ -1,0 +1,16 @@
+kind: pipeline
+name: default
+
+steps:
+  - name: FrontEnd Eval
+    image: node
+    commands:
+      - npm install -g enzyme
+      - npm install -g jest
+      - npm install -g enzyme-adapter-react-16
+      - git clone https://github.com/unsortedArray/countdown-timer.git
+      - cd countdown-timer
+      - cp -a ./ ../src/__tests__
+      - cd ..
+      - npm install
+      - npm run test --exit 
